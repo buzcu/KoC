@@ -1,7 +1,9 @@
 package koc;
 
-/**
- * Created by master on 20.12.2015.
- */
-public class Quest {
+public class Quest extends GameEnvironment{
+
+    public Quest() {
+
+    }
+
 }
