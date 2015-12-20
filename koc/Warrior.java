@@ -1,6 +1,7 @@
 package koc;
+import java.util.Random;
 
-public class Warrior extends koc.Hero {
+public class Warrior extends Hero {
 	int buff;
 
 	public Warrior() {
@@ -31,8 +32,18 @@ public class Warrior extends koc.Hero {
 		//Implementation will be added
 	}
 	
-	public void buffDuration(int buff){
+	
+	
+	public int buffDuration(int buff){
 		//Implementation will be added
+		
+		Random rn = new Random();
+
+		
+		    int duration = rn.nextInt(buff) + 1;
+		    System.out.println("Your buff is"+buff+"and Buff duration is"+duration);
+		return duration;
+		
 	}
 	
 	
