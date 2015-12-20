@@ -43,7 +43,6 @@ public class GameEnvironment {
 			System.out.println("3. Ninja:");
 			System.out.println("4. Warrior:");
 			System.out.println("5. Mage:");
-			System.out.println("6. Orc:");
 			
 			
 			playerType = reader.next();
@@ -53,8 +52,7 @@ public class GameEnvironment {
 					playerType.equals("2") ||
 					playerType.equals("3") ||
 					playerType.equals("4") ||
-					playerType.equals("5") ||
-					playerType.equals("6")
+					playerType.equals("5")
 				)
 			{
 				typeValid = 1;
@@ -94,11 +92,6 @@ public class GameEnvironment {
 		{
 			System.out.println("You selected Mage");
 			player = new Mage();
-		}
-		else if (playerType == "6")
-		{
-			System.out.println("You selected Orc");
-			player = new Orc();
 		}
 		else
 		{
