@@ -1,4 +1,5 @@
 package koc;
+import java.util.Random;
 
 public class Knight extends Hero {
 	int might;
@@ -7,9 +8,8 @@ public class Knight extends Hero {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Knight(String name, int health, int armor, int attackDamage, int attackSpeed, int level, int experience,
-			int goldCoin) {
-		super(name, health, armor, attackDamage, attackSpeed, level, experience, goldCoin);
+	public Knight(String name) {
+		super(name, 1, 1, 1, 1, 1, 1, 1);
 		// TODO Auto-generated constructor stub
 	}
 	
@@ -18,6 +18,10 @@ public class Knight extends Hero {
 		this.might = might;
 	}
 
+	public void setName(String name){
+		this.name = new String(name);
+	}
+	
 	public void setMight(int might){
 		this.might = might;
 	}
@@ -25,8 +29,12 @@ public class Knight extends Hero {
 		return might;
 	}
 	
-	public static void attack_Buff(){
-		//Implementation will be added
+	public double attack_Buff(int might){
+		
+		double random = Math.random() * 10 + 1;
+		double damage = might + random;
+		System.out.println("Your damage is"+damage+"with"+random+"bonus buff");
+		return damage;
 	}
 	
 	public void increaseRep(){
