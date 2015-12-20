@@ -4,14 +4,14 @@ package koc;
 import java.util.Random;
 
 public abstract class Character {
-    private String name;
-    private int health;
-    private int armor;
-    private int attackDamage;
-    private int attackSpeed;
-    private int level;
-    private int experience;
-    private int goldCoin;
+    protected String name;
+    protected int health;
+    protected int armor;
+    protected int attackDamage;
+    protected int attackSpeed;
+    protected int level;
+    protected int experience;
+    protected int goldCoin;
     
     protected Character(){
         name = new String("Unknown");
