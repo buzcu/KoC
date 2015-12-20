@@ -1,8 +1,8 @@
 package koc;
 
 
-public class fight {
-    public fight(Character player, Character enemy) {
+public class Fight {
+    public Fight(Character player, Character enemy) {
         System.out.println("A fight between "+player.name+" and "+enemy.name+" has started");
         main(player, enemy);
     }
