@@ -11,7 +11,7 @@ public class Hunter extends Hero {
 	}
 
 	public Hunter(String name) {
-		super(name, 10, 1, 1, 0.25, 1, 0, 0);
+		super(name, 10, 1, 1, 1, 1, 0, 0);
 		// TODO Auto-generated constructor stub
 	}
 
