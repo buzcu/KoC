@@ -74,7 +74,7 @@ public abstract class Character {
     
     public void getExperience(int experience){
         this.experience += experience;
-        if (Math.sqrt(this.experience) >= this.level)
+        while (Math.sqrt(this.experience) >= this.level)
         {
             this.levelUp();
         }

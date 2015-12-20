@@ -19,7 +19,7 @@ public class Fight {
         }
 
         else {
-            return Boolean.FALSE
+            return Boolean.FALSE;
         }
     }
 

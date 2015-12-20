@@ -1,6 +1,6 @@
 package koc;
 
-public class StormTrooper extends Character {
+public class StormTrooper extends Enemy {
 	int range;
 
 	public StormTrooper() {
