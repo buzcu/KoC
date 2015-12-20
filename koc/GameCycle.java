@@ -4,35 +4,61 @@ import java.util.Scanner;
 
 public class GameCycle extends GameEnvironment {
 
-	/**
-	 * 
-	 */
 	
 	public GameCycle() {
-		// TODO Auto-generated constructor stub
+		super();
 	}
-
 	
-	public void newGame(){
+	
+	private void move() {
+		reader.next();
 		
 	}
-	
-	
+
+
 	public void gameOver(){
+		System.out.println("! GAME OVER !");
 		
-	}
-	
-	public void retry(){
 		
-	}
-	
-	
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		String playerType = "-1";
+		int typeValid = 0;
+		
+		while (typeValid == 0)
+		{
+			System.out.println("Want to play again(y/n)?");
+			
+			playerType = reader.next();
 
+			if (
+					playerType.equals("y") ||
+					playerType.equals("Y") ||
+					playerType.equals("n") ||
+					playerType.equals("N")
+				)
+			{
+				typeValid = 1;
+				
+			}
+			else
+			{
+				System.out.println("You made an incorrect entry!");
+			}
+		}
+		
+		if (playerType.equals("y") || playerType.equals("Y"))
+		{
+			new GameCycle();
+		}
+		
+		
+	}
+	
+	public void loopUntilGameOver() {
+		while (player.health > 0)
+		{
+			move();
+		}
+		
 	}
 
 }

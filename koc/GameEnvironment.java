@@ -4,8 +4,8 @@ package koc;
 import java.util.Scanner;
 
 
-public class GameEnvironment {
-	private static Scanner reader;
+public abstract class GameEnvironment {
+	protected static Scanner reader;
 	protected Hero player;
 	
 	public GameEnvironment()
@@ -14,9 +14,6 @@ public class GameEnvironment {
 		String playerName = getPlayerNameFromUser();
 		String playerType = getPlayerTypeFromUser();
 		player = getPlayerObject(playerName, playerType);
-		reader.close();
-		
-		
 	}
 
 
@@ -68,27 +65,27 @@ public class GameEnvironment {
 
 	private static Hero getPlayerObject(String playerName, String playerType) {
 		Hero player;
-		if (playerType == "1")
+		if (playerType.equals("1"))
 		{
 			System.out.println("You selected Hunter");
 			player = new Hunter();
 		}
-		else if (playerType == "2")
+		else if (playerType.equals("2"))
 		{
 			System.out.println("You selected Knight");
 			player = new Knight();
 		}
-		else if (playerType == "3")
+		else if (playerType.equals("3"))
 		{
 			System.out.println("You selected Ninja");
 			player = new Ninja();
 		}
-		else if (playerType == "4")
+		else if (playerType.equals("4"))
 		{
 			System.out.println("You selected Warrior");
 			player = new Warrior();
 		}
-		else if (playerType == "5")
+		else if (playerType.equals("5"))
 		{
 			System.out.println("You selected Mage");
 			player = new Mage();
@@ -99,5 +96,8 @@ public class GameEnvironment {
 		}
 		return player;
 	}
+
+
+
 	
 }
