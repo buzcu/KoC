@@ -47,22 +47,26 @@ public class GameCycle extends GameEnvironment {
 			
 			if (luck < 15)
 			{
-				//fight = new Fight(player, new Orc())
+				new Fight(player, new Orc());
 			}
 			else if (luck < 30)
 			{
+				new Fight(player, new DeathEater());
 				
 			}
 			else if (luck < 45)
 			{
+				new Fight(player, new Nazi());
 				
 			}
 			else if (luck < 60)
 			{
+				new Fight(player, new StormTrooper());
 				
 			}
 			else if (luck < 75)
 			{
+				new Fight(player, new Assasin());
 				
 			}
 			
@@ -70,6 +74,7 @@ public class GameCycle extends GameEnvironment {
 		else if(playerMove.equals("R") || playerMove.equals("r"))
 		{
 			player.health = (int) (player.health * 1.4) + 1;
+			System.out.println("Your new health is: "+ player.health);
 			
 		}
 		

@@ -1,6 +1,6 @@
 package koc;
 
-public class Orc extends Hero {
+public class Orc extends Enemy {
 	int buff;
 
 	public Orc() {
