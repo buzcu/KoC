@@ -7,6 +7,12 @@ public abstract class  Enemy extends Character {
 	public Enemy() {
 		// TODO Auto-generated constructor stub
 	}
+	
+	public Enemy(Hero player)
+	{
+		this.getExperience(player.experience);
+		
+	}
 
 	public Enemy(String name, int health, int armor, int attackDamage, int attackSpeed, int level, int experience,
 			int goldCoin) {
