@@ -36,7 +36,13 @@ public abstract class Character {
         this.experience = experience;
         this.goldCoin = goldCoin;
     }
-    
+
+    public String getName(){
+        return this.name;
+    }
+
+
+
     public void attack_to(Character enemy){
         enemy.getDamage(this.attackDamage);
     }

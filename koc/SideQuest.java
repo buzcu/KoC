@@ -3,11 +3,7 @@
  */
 package koc;
 
-/**
- * @author gorkem
- *
- */
-public class SideQuest extends GameEnvironment {
+public class SideQuest extends Quest {
 
 	/**
 	 * 
@@ -15,6 +11,7 @@ public class SideQuest extends GameEnvironment {
 	float sideQuestProbability;
 	
 	public SideQuest() {
+		super();
 		// TODO Auto-generated constructor stub
 	}
 

@@ -3,11 +3,7 @@
  */
 package koc;
 
-/**
- * @author gorkem
- *
- */
-public class MainQuest extends koc.GameEnvironment {
+public class MainQuest extends Quest {
 
 	/**
 	 * 
@@ -15,6 +11,7 @@ public class MainQuest extends koc.GameEnvironment {
 	boolean chapterComplete;
 	
 	public MainQuest() {
+		super();
 		// TODO Auto-generated constructor stub
 	}
 
