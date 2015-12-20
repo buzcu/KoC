@@ -17,8 +17,7 @@ public class GameCycle extends GameEnvironment {
 		
 		while (typeValid == 0)
 		{
-			System.out.println("You can (R)est or (W)alk.");
-			System.out.println("What is your move?");
+			System.out.println("You can (R)est or (W)alk:");
 			
 			playerMove = reader.next();
 
@@ -43,7 +42,7 @@ public class GameCycle extends GameEnvironment {
 		if (playerMove.equals("W") || playerMove.equals("w"))
 		{
 			player.health = (int) (player.health * 1.1) + 1;
-			int luck = rand.nextInt(100)+1;
+			int luck = rand.nextInt(500)+1;
 			
 			if (luck < 15)
 			{
@@ -69,14 +68,18 @@ public class GameCycle extends GameEnvironment {
 				new Fight(player, new Assasin());
 				
 			}
+			else
+			{
+				System.out.println("You were lucky and saw no monsters.");
+			}
 			
 		}
 		else if(playerMove.equals("R") || playerMove.equals("r"))
 		{
 			player.health = (int) (player.health * 1.4) + 1;
-			System.out.println("Your new health is: "+ player.health);
 			
 		}
+		System.out.println("Your new health is: "+ player.health);
 		
 	}
 
@@ -112,7 +115,9 @@ public class GameCycle extends GameEnvironment {
 		
 		if (playerType.equals("y") || playerType.equals("Y"))
 		{
-			new GameCycle();
+			GameCycle newgame = new GameCycle();
+			newgame.loopUntilGameOver();
+			newgame.gameOver();
 		}
 		
 		
@@ -121,10 +126,6 @@ public class GameCycle extends GameEnvironment {
 	public void loopUntilGameOver() {
 		while (player.health > 0)
 		{
-			
-
-			
-			
 			move();
 		}
 		
