@@ -31,11 +31,12 @@ public class KnightsofCydonia {
 					playerType.equals("5")||
 					playerType.equals("6"))
 			{
-				System.out.println("You made an incorrect entry!");
+				typeValid = 1;
+				
 			}
 			else
 			{
-				typeValid = 1;
+				System.out.println("You made an incorrect entry!");
 			}
 		}
 
