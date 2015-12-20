@@ -17,6 +17,7 @@ public class fight {
         if (player.health>0){
             return Boolean.TRUE;
         }
+
         else {
             return Boolean.FALSE
         }
