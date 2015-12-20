@@ -24,12 +24,12 @@ public class KnightsofCydonia {
 			reader = new Scanner(System.in);
 			playerType = reader.next();
 
-			if (playerType != "1" &&
-					playerType != "2" &&
-					playerType != "3" &&
-					playerType != "4" &&
-					playerType != "5" &&
-					playerType != "6")
+			if (playerType.equals("1") ||
+					playerType.equals("2") ||
+					playerType.equals("3") ||
+					playerType.equals("4") ||
+					playerType.equals("5")||
+					playerType.equals("6"))
 			{
 				System.out.println("You made an incorrect entry!");
 			}
