@@ -8,8 +8,17 @@ public class Quest extends GameEnvironment{
         this.questName="default quest";
     }
 
+    public Quest(Character player, String questName){
+        super();
+        this.questName=questName;
+        System.out.println("The quest has been started "+player.getName());
+        System.out.println(this.questName);
+
+    }
+
     public Quest(Character player){
-        this.questName="default quest"
+        super();
+        this.questName="default quest";
         System.out.println("The quest has been started "+player.getName());
         System.out.println(this.questName);
     }
