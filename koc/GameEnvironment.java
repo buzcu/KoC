@@ -4,8 +4,8 @@ package koc;
 import java.util.Scanner;
 
 
-public class GameEnvironment {
-	private static Scanner reader;
+public abstract class GameEnvironment {
+	protected static Scanner reader;
 	protected Hero player;
 	
 	public GameEnvironment()
@@ -14,9 +14,6 @@ public class GameEnvironment {
 		String playerName = getPlayerNameFromUser();
 		String playerType = getPlayerTypeFromUser();
 		player = getPlayerObject(playerName, playerType);
-		reader.close();
-		
-		
 	}
 
 
@@ -43,7 +40,6 @@ public class GameEnvironment {
 			System.out.println("3. Ninja:");
 			System.out.println("4. Warrior:");
 			System.out.println("5. Mage:");
-			System.out.println("6. Orc:");
 			
 			
 			playerType = reader.next();
@@ -53,8 +49,7 @@ public class GameEnvironment {
 					playerType.equals("2") ||
 					playerType.equals("3") ||
 					playerType.equals("4") ||
-					playerType.equals("5") ||
-					playerType.equals("6")
+					playerType.equals("5")
 				)
 			{
 				typeValid = 1;
@@ -70,35 +65,30 @@ public class GameEnvironment {
 
 	private static Hero getPlayerObject(String playerName, String playerType) {
 		Hero player;
-		if (playerType == "1")
+		if (playerType.equals("1"))
 		{
 			System.out.println("You selected Hunter");
 			player = new Hunter();
 		}
-		else if (playerType == "2")
+		else if (playerType.equals("2"))
 		{
 			System.out.println("You selected Knight");
 			player = new Knight();
 		}
-		else if (playerType == "3")
+		else if (playerType.equals("3"))
 		{
 			System.out.println("You selected Ninja");
 			player = new Ninja();
 		}
-		else if (playerType == "4")
+		else if (playerType.equals("4"))
 		{
 			System.out.println("You selected Warrior");
 			player = new Warrior();
 		}
-		else if (playerType == "5")
+		else if (playerType.equals("5"))
 		{
 			System.out.println("You selected Mage");
 			player = new Mage();
-		}
-		else if (playerType == "6")
-		{
-			System.out.println("You selected Orc");
-			player = new Orc();
 		}
 		else
 		{
@@ -106,5 +96,8 @@ public class GameEnvironment {
 		}
 		return player;
 	}
+
+
+
 	
 }
