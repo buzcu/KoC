@@ -49,10 +49,13 @@ public abstract class Character {
     
     public void getDamage(int damage){
         this.health -= damage;
+        System.out.println(this.name+" got "+damage+" damage.");
+        
         if (this.health <= 0)
         {
             this.die();
         }
+        System.out.println(this.name+" got "+this.health+" HP left.");
     }
     
     public void levelUp(){

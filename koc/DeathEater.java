@@ -6,7 +6,7 @@ public class DeathEater extends Enemy {
 
 
 	public DeathEater() {
-		// TODO Auto-generated constructor stub
+		super("Death Eater", 10, 1, 1, 1, 1, 0, 10);
 	}
 
 	public DeathEater(String name, int health, int armor, int attackDamage, int attackSpeed, int level, int experience,

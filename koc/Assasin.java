@@ -4,7 +4,7 @@ public class Assasin extends Enemy {
 	int energy;
 
 	public Assasin() {
-		// TODO Auto-generated constructor stub
+		super("Assasin", 10, 1, 1, 1, 1, 0, 10);
 	}
 
 	public Assasin(String name, int health, int armor, int attackDamage, int attackSpeed, int level, int experience,

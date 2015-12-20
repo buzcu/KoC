@@ -4,7 +4,7 @@ public class Orc extends Enemy {
 	int buff;
 
 	public Orc() {
-		// TODO Auto-generated constructor stub
+		super("Orc", 10, 1, 1, 1, 1, 0, 10);
 	}
 
 	public Orc(String name, int health, int armor, int attackDamage, int attackSpeed, int level, int experience,
