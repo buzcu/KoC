@@ -56,6 +56,7 @@ public class GameCycle extends GameEnvironment {
 	public void loopUntilGameOver() {
 		while (player.health > 0)
 		{
+			System.out.println("What is your move?");
 			move();
 		}
 		
