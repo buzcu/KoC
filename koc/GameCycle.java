@@ -1,12 +1,7 @@
-/**
- * 
- */
 package koc;
 
-/**
- * @author gorkem
- *
- */
+import java.util.Scanner;
+
 public class GameCycle extends GameEnvironment {
 
 	/**
