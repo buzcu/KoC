@@ -32,7 +32,7 @@ public abstract class Character {
             int attackSpeed, int level, int experience, int goldCoin)
     {
         this.name = new String(name);
-        //this.maxHealth = health;
+        this.maxHealth = 15;
         this.health = health;
         this.armor = armor;
         this.attackDamage = attackDamage;
