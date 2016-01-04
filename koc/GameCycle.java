@@ -41,7 +41,10 @@ public class GameCycle extends GameEnvironment {
 		
 		if (playerMove.equals("W") || playerMove.equals("w"))
 		{
-			player.health = (int) (player.health * 1.1) + 1;
+			player.health = (int) (player.health * 1.1);
+			if (player.health>player.maxHealth){
+				player.health=player.maxHealth;
+			}
 			int luck = rand.nextInt(500)+1;
 			
 			if (luck < 15)
@@ -77,7 +80,7 @@ public class GameCycle extends GameEnvironment {
 		//Rest Functionality rests here
 		if(playerMove.equals("R") || playerMove.equals("r"))
 		{
-			player.health = player.health + (player.health / 2) + 1;
+			player.health = player.health + (int)(player.health * 1.4) + 1;
 			if (player.health>player.maxHealth){
 				player.health=player.maxHealth;
 				}
