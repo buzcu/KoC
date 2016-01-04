@@ -40,6 +40,7 @@ public abstract class Character {
         this.level = level;
         this.experience = experience;
         this.goldCoin = goldCoin;
+        this.hitpos=0.6;
     }
 
     public String getName(){
