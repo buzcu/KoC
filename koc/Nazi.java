@@ -4,7 +4,7 @@ public class Nazi extends Enemy {
 	int might;
 
 	public Nazi() {
-		super("Nazi", 13, 1, 1, 1, 1, 0, 10);
+		super("Nazi", 13, 1, 1, 1, 1, 0, 0);
 	}
 
 	public Nazi(String name, int health, int armor, int attackDamage, int attackSpeed, int level, int experience,

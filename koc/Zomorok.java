@@ -5,7 +5,7 @@ public class Zomorok extends Enemy {
     int buff;
 
     public Zomorok() {
-        super("Zomorok", 15, 1, 1, 1, 1, 0, 10);
+        super("Zomorok", 15, 1, 1, 1, 1, 0, 0);
     }
 
     public Zomorok(String name, int health, int armor, int attackDamage, int attackSpeed, int level, int experience,

@@ -4,7 +4,7 @@ public class Assasin extends Enemy {
 	int energy;
 
 	public Assasin() {
-		super("Assasin", 9, 1, 1, 1, 1, 0, 10);
+		super("Assasin", 9, 1, 1, 1, 1, 0, 0);
 	}
 
 	public Assasin(String name, int health, int armor, int attackDamage, int attackSpeed, int level, int experience,
