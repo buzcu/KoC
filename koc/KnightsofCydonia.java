@@ -26,7 +26,7 @@ public class KnightsofCydonia {
 	}
 	public static void playSound() {
         try {
-            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("/Users/Alican/Desktop/koc.wav").getAbsoluteFile());
+            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("/Users/Alican/KoC/koc.wav").getAbsoluteFile());
             Clip clip = AudioSystem.getClip();
             clip.open(audioInputStream);
             clip.start();
@@ -38,7 +38,7 @@ public class KnightsofCydonia {
 	}
 	public static void stopSound() {
         try {
-            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("/Users/Alican/Desktop/koc.wav").getAbsoluteFile());
+            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("/Users/Alican/KoC/koc.wav").getAbsoluteFile());
             Clip clip = AudioSystem.getClip();
             clip.open(audioInputStream);
             clip.stop();
