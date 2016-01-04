@@ -4,7 +4,7 @@ public class StormTrooper extends Enemy {
 	int range;
 
 	public StormTrooper() {
-		super("StormTrooper", 10, 1, 1, 1, 1, 0, 10);
+		super("StormTrooper", 7, 1, 1, 1, 1, 0, 10);
 	}
 
 	public StormTrooper(String name, int health, int armor, int attackDamage, int attackSpeed, int level,

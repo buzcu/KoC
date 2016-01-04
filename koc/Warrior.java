@@ -9,7 +9,7 @@ public class Warrior extends Hero {
 	}
 
 	public Warrior(String name) {
-		super(name, 10, 1, 1, 1, 1, 1, 5);
+		super(name, 15, 1, 1, 1, 1, 1, 5);
 		// TODO Auto-generated constructor stub
 	}
 	

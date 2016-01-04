@@ -25,7 +25,7 @@ public abstract class Character {
         level = 0;
         experience = 0;
         goldCoin = 0;
-        maxHealth = 10;
+        maxHealth = 15;
     }
     
     protected Character(String name, int health, int armor, int attackDamage,
