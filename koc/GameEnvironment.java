@@ -23,6 +23,8 @@ public abstract class GameEnvironment {
 
 		String playerName = reader.next();
 		System.out.println("Hello "+playerName);
+		System.out.println("A long time ago, in a galaxy far far away, our hero "+playerName+" played a dangerous gamble with Zomorok and lost. Unfortunately, our hero has not any gold to pay. They made a deal and as the deal dictates, Zomorok took "+playerName+"\'s sister as hostage and demands 100 gold to release. Our hero now starts a new journey to gather the demanded gold. Will s/he be successful or not? Dangerous encounters await!");
+		System.out.println("Now "+playerName+" should explore the galaxy by walking and slay the enemies to gather the gold!");
 		return playerName;
 	}
 
