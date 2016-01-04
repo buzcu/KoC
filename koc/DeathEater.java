@@ -6,7 +6,7 @@ public class DeathEater extends Enemy {
 
 
 	public DeathEater() {
-		super("Death Eater", 10, 1, 1, 1, 1, 0, 10);
+		super("Death Eater", 10, 1, 1, 1, 1, 0, 0);
 	}
 
 	public DeathEater(String name, int health, int armor, int attackDamage, int attackSpeed, int level, int experience,

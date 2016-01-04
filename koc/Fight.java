@@ -4,11 +4,12 @@ import java.util.Scanner;
 
 public class Fight {
     private static Scanner reader;
-
+    public Boolean Result;
     public Fight(Character player, Character enemy) {
     	reader = new Scanner(System.in);
         System.out.println("A fight between "+player.name+" and "+enemy.name+" has started");
-        main(player, enemy);
+        Result=main(player, enemy);
+
     }
 
     public Boolean main(Character player, Character enemy){
@@ -37,6 +38,7 @@ public class Fight {
         }
 
         else {
+            System.out.println("Oh No! You have been slayed by enemy! Your journey is over. Better luck next time. \n(Game Over)");
             return Boolean.FALSE;
         }
     }

@@ -54,6 +54,7 @@ public abstract class Character {
         if (randomValue>hitpos)
         {
             System.out.println("Attack missed");
+            enemy.getDamage(0);
         }
         else {
             enemy.getDamage(this.attackDamage);
@@ -67,6 +68,7 @@ public abstract class Character {
         
         if (this.health <= 0)
         {
+            this.health=0;
             this.die();
         }
         System.out.println(this.name+" got "+this.health+" HP left.");
@@ -87,12 +89,13 @@ public abstract class Character {
         Random generator = new Random();
         int goldInChest = generator.nextInt(10) + 1;
         this.goldCoin += goldInChest;
+        System.out.println("You gained "+goldInChest+" coins.\nYour new inventory has "+this.goldCoin+" coins.\n");
     }
     
-    public void leaveChest()
-    {
-        System.out.println("Sen devletten zengin misin?");
-    }
+    //public void leaveChest()
+    //{
+    //   System.out.println("Sen devletten zengin misin?");
+    //}
 
     public void getExperience(int experience){
         this.experience += experience;
