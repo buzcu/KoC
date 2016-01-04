@@ -135,7 +135,7 @@ public class GameCycle extends GameEnvironment {
 		while (player.health > 0)
 		{
 			move();
-			if (player.goldCoin>=100){
+			if (player.goldCoin>=25){
 				System.out.println("Yay! You gathered the required gold to pay Zomorok. Now your sister should be free! \n\nWait what!?!!\nZomorok refuses to release your sister and he demands a fight! A wild Zomorok appeared!");
 				System.out.println("\n----\tBoss Fight!\t---\n");
 				Character zomorok = new Zomorok();
