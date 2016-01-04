@@ -48,22 +48,22 @@ public class GameCycle extends GameEnvironment {
 			{
 				new Fight(player, new Orc());
 			}
-			else if (luck < 30)
+			else if (luck < 40)
 			{
 				new Fight(player, new DeathEater());
 				
 			}
-			else if (luck < 45)
+			else if (luck < 55)
 			{
 				new Fight(player, new Nazi());
 				
 			}
-			else if (luck < 60)
+			else if (luck < 75)
 			{
 				new Fight(player, new StormTrooper());
 				
 			}
-			else if (luck < 75)
+			else if (luck < 90)
 			{
 				new Fight(player, new Assasin());
 				
