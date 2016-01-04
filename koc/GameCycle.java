@@ -42,7 +42,8 @@ public class GameCycle extends GameEnvironment {
 		if (playerMove.equals("W") || playerMove.equals("w"))
 		{
 			player.health = (int) (player.health * 1.1);
-			if (player.health>player.maxHealth){
+			if (player.health>player.maxHealth)
+			{
 				player.health=player.maxHealth;
 			}
 			int luck = rand.nextInt(500)+1;

@@ -48,7 +48,6 @@ public abstract class Character {
     }
 
 
-
     public void attack_to(Character enemy){
         Random r = new Random();
         double randomValue = r.nextDouble();
@@ -73,8 +72,12 @@ public abstract class Character {
         System.out.println(this.name+" got "+this.health+" HP left.");
     }
     
-    public void levelUp(){
+    public void levelUp()
+    {
         this.level += 1;
+        this.maxHealth=this.maxHealth+this.level;
+        this.attackDamage=this.attackDamage+this.level;
+        this.attackSpeed=(int)(this.attackSpeed*0.7);
     }
     
     public abstract void die();
@@ -92,7 +95,7 @@ public abstract class Character {
 
     public void getExperience(int experience){
         this.experience += experience;
-        while (Math.sqrt(this.experience) >= this.level)
+        if (Math.sqrt(this.experience) >= this.level)
         {
             this.levelUp();
         }

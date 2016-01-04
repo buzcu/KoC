@@ -27,6 +27,8 @@ public class Fight {
             }
             else {
                 player.collectChest();
+                player.getExperience(3);
+
             }
         }
         if (player.health>0){
