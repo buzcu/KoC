@@ -94,8 +94,7 @@ public class GameCycle extends GameEnvironment {
 
 
 	public void gameOver(){
-		System.out.println("Oh No! You have been slayed by enemy! Your journey is over. Better luck next time. \n(Game Over)");
-		
+
 		
 		String playerType = "-1";
 		int typeValid = 0;

@@ -38,6 +38,7 @@ public class Fight {
         }
 
         else {
+            System.out.println("Oh No! You have been slayed by enemy! Your journey is over. Better luck next time. \n(Game Over)");
             return Boolean.FALSE;
         }
     }
