@@ -41,12 +41,13 @@ public class GameCycle extends GameEnvironment {
 		
 		if (playerMove.equals("W") || playerMove.equals("w"))
 		{
+
 			player.health = (int) (player.health * 1.1);
 			if (player.health>player.maxHealth)
 			{
 				player.health=player.maxHealth;
 			}
-			int luck = rand.nextInt(500)+1;
+			int luck = rand.nextInt(100)+1;
 			
 			if (luck < 15)
 			{
@@ -93,7 +94,7 @@ public class GameCycle extends GameEnvironment {
 
 
 	public void gameOver(){
-		System.out.println("! GAME OVER !");
+		System.out.println("Oh No! You have been slayed by enemy! Your journey is over. Better luck next time. \n(Game Over)");
 		
 		
 		String playerType = "-1";
@@ -135,8 +136,25 @@ public class GameCycle extends GameEnvironment {
 		while (player.health > 0)
 		{
 			move();
+			if (player.goldCoin>=100){
+				System.out.println("Yay! You gathered the required gold to pay Zomorok. Now your sister should be free! \n\nWait what!?!!\nZomorok refuses to release your sister and he demands a fight! A wild Zomorok appeared!");
+				System.out.println("\n----\tBoss Fight!\t---\n");
+				Character zomorok = new Orc();
+				zomorok.maxHealth=30;
+				zomorok.health=30;
+				zomorok.level=5;
+				zomorok.attackDamage=4;
+				Fight finall = new Fight(player, zomorok);
+				if (finall.Result){
+					System.out.println("You finally killed Zomorok and rescued your sister! Well done!");
+					break;
+				}
+				else {
+					System.out.println("Noooooooooooooo...... Zomorok was your father!\nAnd you are dead...");
+				}
+			}
 		}
-		
+
 	}
 
 }

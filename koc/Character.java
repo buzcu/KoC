@@ -90,10 +90,10 @@ public abstract class Character {
         this.goldCoin += goldInChest;
     }
     
-    public void leaveChest()
-    {
-        System.out.println("Sen devletten zengin misin?");
-    }
+    //public void leaveChest()
+    //{
+    //   System.out.println("Sen devletten zengin misin?");
+    //}
 
     public void getExperience(int experience){
         this.experience += experience;
