@@ -87,7 +87,7 @@ public class GameCycle extends GameEnvironment {
 				}
 			
 		}
-		System.out.println("Your new health is: "+ player.health);
+		//System.out.println("Your new health is: "+ player.health);
 		
 	}
 
