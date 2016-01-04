@@ -54,6 +54,7 @@ public abstract class Character {
         if (randomValue>hitpos)
         {
             System.out.println("Attack missed");
+            enemy.getDamage(0);
         }
         else {
             enemy.getDamage(this.attackDamage);
