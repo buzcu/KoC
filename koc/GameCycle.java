@@ -75,12 +75,12 @@ public class GameCycle extends GameEnvironment {
 			
 		}
 		//Rest Functionality rests here
-		else if(playerMove.equals("R") || playerMove.equals("r"))
+		if(playerMove.equals("R") || playerMove.equals("r"))
 		{
-			player.health = (int) (player.health * 1.4) + 1;
+			player.health = player.health + (player.health / 2) + 1;
 			if (player.health>player.maxHealth){
 				player.health=player.maxHealth;
-			}
+				}
 			
 		}
 		System.out.println("Your new health is: "+ player.health);
