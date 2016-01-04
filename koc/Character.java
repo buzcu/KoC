@@ -67,6 +67,7 @@ public abstract class Character {
         
         if (this.health <= 0)
         {
+            this.health=0;
             this.die();
         }
         System.out.println(this.name+" got "+this.health+" HP left.");
