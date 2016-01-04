@@ -23,7 +23,6 @@ public abstract class GameEnvironment {
 
 		String playerName = reader.next();
 		System.out.println("Hello "+playerName);
-
 		return playerName;
 	}
 
@@ -68,27 +67,27 @@ public abstract class GameEnvironment {
 		if (playerType.equals("1"))
 		{
 			System.out.println("You selected Hunter");
-			player = new Hunter();
+			player = new Hunter(playerName);
 		}
 		else if (playerType.equals("2"))
 		{
 			System.out.println("You selected Knight");
-			player = new Knight();
+			player = new Knight(playerName);
 		}
 		else if (playerType.equals("3"))
 		{
 			System.out.println("You selected Ninja");
-			player = new Ninja();
+			player = new Ninja(playerName);
 		}
 		else if (playerType.equals("4"))
 		{
 			System.out.println("You selected Warrior");
-			player = new Warrior();
+			player = new Warrior(playerName);
 		}
 		else if (playerType.equals("5"))
 		{
 			System.out.println("You selected Mage");
-			player = new Mage();
+			player = new Mage(playerName);
 		}
 		else
 		{

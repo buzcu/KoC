@@ -8,12 +8,11 @@ public class Warrior extends Hero {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Warrior(String name, int health, int armor, int attackDamage, int attackSpeed, int level, int experience,
-			int goldCoin) {
-		super(name, health, armor, attackDamage, attackSpeed, level, experience, goldCoin);
+	public Warrior(String name) {
+		super(name, 15, 1, 1, 1, 1, 1, 5);
 		// TODO Auto-generated constructor stub
 	}
-
+	
 	public Warrior(int buff) {
 		this.buff= buff;
 	}

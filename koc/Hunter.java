@@ -11,7 +11,7 @@ public class Hunter extends Hero {
 	}
 
 	public Hunter(String name) {
-		super(name, 10, 1, 1, 1, 1, 0, 0);
+		super(name, 7, 1, 1, 1, 1, 0, 0);
 		// TODO Auto-generated constructor stub
 	}
 
@@ -47,6 +47,7 @@ public class Hunter extends Hero {
 		if(range>100){
 			System.out.println(range+"is Out of Range");
 		}
+
 		else{
 			
 			double random = Math.random() * 50 + 1;

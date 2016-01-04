@@ -11,6 +11,7 @@ public class KnightsofCydonia {
 		System.out.println("\n/------\t------\t------\\\n*/\\*Knights of Cydonia*/\\*\n/------\t------\t------\\");
 		game = new GameCycle();
 		game.loopUntilGameOver();
+		game.gameOver();
 
 	}
 

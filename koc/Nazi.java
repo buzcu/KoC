@@ -4,7 +4,7 @@ public class Nazi extends Enemy {
 	int might;
 
 	public Nazi() {
-		// TODO Auto-generated constructor stub
+		super("Nazi", 13, 1, 1, 1, 1, 0, 10);
 	}
 
 	public Nazi(String name, int health, int armor, int attackDamage, int attackSpeed, int level, int experience,

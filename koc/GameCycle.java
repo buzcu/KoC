@@ -17,8 +17,7 @@ public class GameCycle extends GameEnvironment {
 		
 		while (typeValid == 0)
 		{
-			System.out.println("You can (R)est or (W)alk.");
-			System.out.println("What is your move?");
+			System.out.println("You can (R)est or (W)alk:");
 			
 			playerMove = reader.next();
 
@@ -42,41 +41,53 @@ public class GameCycle extends GameEnvironment {
 		
 		if (playerMove.equals("W") || playerMove.equals("w"))
 		{
-			player.health = (int) (player.health * 1.1) + 1;
-			int luck = rand.nextInt(100)+1;
+			player.health = (int) (player.health * 1.1);
+			if (player.health>player.maxHealth)
+			{
+				player.health=player.maxHealth;
+			}
+			int luck = rand.nextInt(500)+1;
 			
 			if (luck < 15)
 			{
 				new Fight(player, new Orc());
 			}
-			else if (luck < 30)
+			else if (luck < 40)
 			{
 				new Fight(player, new DeathEater());
 				
 			}
-			else if (luck < 45)
+			else if (luck < 55)
 			{
 				new Fight(player, new Nazi());
 				
 			}
-			else if (luck < 60)
+			else if (luck < 75)
 			{
 				new Fight(player, new StormTrooper());
 				
 			}
-			else if (luck < 75)
+			else if (luck < 90)
 			{
 				new Fight(player, new Assasin());
 				
 			}
+			else
+			{
+				System.out.println("You were lucky and saw no monsters.");
+			}
 			
 		}
-		else if(playerMove.equals("R") || playerMove.equals("r"))
+		//Rest Functionality rests here
+		if(playerMove.equals("R") || playerMove.equals("r"))
 		{
-			player.health = (int) (player.health * 1.4) + 1;
-			System.out.println("Your new health is: "+ player.health);
+			player.health = player.health + (int)(player.health * 1.4) + 1;
+			if (player.health>player.maxHealth){
+				player.health=player.maxHealth;
+				}
 			
 		}
+		System.out.println("Your new health is: "+ player.health);
 		
 	}
 
@@ -112,7 +123,9 @@ public class GameCycle extends GameEnvironment {
 		
 		if (playerType.equals("y") || playerType.equals("Y"))
 		{
-			new GameCycle();
+			GameCycle newgame = new GameCycle();
+			newgame.loopUntilGameOver();
+			newgame.gameOver();
 		}
 		
 		
@@ -121,10 +134,6 @@ public class GameCycle extends GameEnvironment {
 	public void loopUntilGameOver() {
 		while (player.health > 0)
 		{
-			
-
-			
-			
 			move();
 		}
 		

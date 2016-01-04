@@ -9,7 +9,7 @@ public class Knight extends Hero {
 	}
 
 	public Knight(String name) {
-		super(name, 1, 1, 1, 1, 1, 1, 1);
+		super(name, 13, 1, 1, 1, 1, 1, 1);
 		// TODO Auto-generated constructor stub
 	}
 	
