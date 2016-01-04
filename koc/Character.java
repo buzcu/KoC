@@ -89,7 +89,7 @@ public abstract class Character {
     {
         System.out.println("Sen devletten zengin misin?");
     }
-    
+
     public void getExperience(int experience){
         this.experience += experience;
         while (Math.sqrt(this.experience) >= this.level)
