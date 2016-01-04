@@ -9,6 +9,7 @@ public abstract class Character {
     protected int armor;
     protected int attackDamage;
     protected int attackSpeed;
+    protected double hitpos;
     protected int level;
     protected int experience;
     protected int goldCoin;
@@ -18,6 +19,7 @@ public abstract class Character {
         name = new String("Unknown");
         health = 10;
         armor = 0;
+        hitpos = 0.6;
         attackDamage = 1;
         attackSpeed = 1;
         level = 0;
@@ -47,7 +49,16 @@ public abstract class Character {
 
 
     public void attack_to(Character enemy){
-        enemy.getDamage(this.attackDamage);
+        Random r = new Random();
+        double randomValue = r.nextDouble();
+        if (randomValue>hitpos)
+        {
+            System.out.println("Attack missed");
+        }
+        else {
+            enemy.getDamage(this.attackDamage);
+        }
+
     }
     
     public void getDamage(int damage){

@@ -47,6 +47,7 @@ public class Hunter extends Hero {
 		if(range>100){
 			System.out.println(range+"is Out of Range");
 		}
+
 		else{
 			
 			double random = Math.random() * 50 + 1;

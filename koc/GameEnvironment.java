@@ -23,7 +23,6 @@ public abstract class GameEnvironment {
 
 		String playerName = reader.next();
 		System.out.println("Hello "+playerName);
-
 		return playerName;
 	}
 
