@@ -78,13 +78,14 @@ public abstract class Character {
         this.maxHealth=this.maxHealth+this.level;
         this.attackDamage=this.attackDamage+this.level;
         this.attackSpeed=(int)(this.attackSpeed*0.7);
+        System.out.println("Level up! You are now level"+this.level);
     }
     
     public abstract void die();
     
     public void collectChest(){
         Random generator = new Random();
-        int goldInChest = generator.nextInt(this.goldCoin/10) + 1;
+        int goldInChest = generator.nextInt(10) + 1;
         this.goldCoin += goldInChest;
     }
     
@@ -95,6 +96,7 @@ public abstract class Character {
 
     public void getExperience(int experience){
         this.experience += experience;
+        System.out.println("You have gained "+experience+" experience.");
         if (Math.sqrt(this.experience) >= this.level)
         {
             this.levelUp();
