@@ -25,6 +25,9 @@ public class Fight {
                 System.out.println("It is your enemy's turn to attack!");
                 enemy.attack_to(player);
             }
+            else {
+                player.collectChest();
+            }
         }
         if (player.health>0){
             return Boolean.TRUE;
