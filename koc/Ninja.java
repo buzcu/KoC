@@ -8,7 +8,7 @@ public class Ninja extends Hero {
 	}
 
 	public Ninja(String name) {
-		super(name, 1, 1, 1, 1, 1, 1, 5);
+		super(name, 10, 1, 1, 1, 1, 1, 5);
 		// TODO Auto-generated constructor stub
 	}
 
