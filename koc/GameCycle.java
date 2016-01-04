@@ -134,6 +134,8 @@ public class GameCycle extends GameEnvironment {
 			newgame.gameOver();
 		}
 		
+		else
+			System.out.println("GOOD BYE!");
 		
 	}
 	
