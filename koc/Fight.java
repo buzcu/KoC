@@ -28,7 +28,7 @@ public class Fight {
             else {
                 player.collectChest();
                 player.getExperience(3);
-
+                System.out.println("Your current health is "+player.health+", Your maximum health is "+player.maxHealth);
             }
         }
         if (player.health>0){
