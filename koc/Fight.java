@@ -13,6 +13,7 @@ public class Fight {
 
     public Boolean main(Character player, Character enemy){
         while (player.health>0 && enemy.health>0){
+            System.out.println("\n\n\n\n\n");
             System.out.println("Do you want to (H)it or (R)un:");
             String choice = reader.next();
             if (choice.equals("r")){
