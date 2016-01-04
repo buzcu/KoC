@@ -95,7 +95,13 @@ public class GameCycle extends GameEnvironment {
 
 	public void gameOver(){
 
-		
+		System.out.println("Developers:\n" +
+				"Alican Karamil\n" +
+				"Bariscan Camlidere\n" +
+				"Bora Kirca\n" +
+				"Gorkem Buzcu\n" +
+				"\n" +
+				"Thank you for playing!");
 		String playerType = "-1";
 		int typeValid = 0;
 		

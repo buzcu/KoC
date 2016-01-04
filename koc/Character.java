@@ -88,6 +88,7 @@ public abstract class Character {
         Random generator = new Random();
         int goldInChest = generator.nextInt(10) + 1;
         this.goldCoin += goldInChest;
+        System.out.println("You gained "+goldInChest+" coins.\nYour new inventory has "+this.goldCoin+" coins.\n");
     }
     
     //public void leaveChest()
