@@ -1,8 +1,5 @@
 package koc;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class Fight {
@@ -23,6 +20,7 @@ public class Fight {
             choice = reader.next();
             if (choice.equals("r")){
                 System.out.println("You choose the coward way and you fleed.");
+                player.getExperience(1);
                 return Boolean.FALSE;
             }
 

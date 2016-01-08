@@ -6,9 +6,9 @@ import java.util.Random;
 public abstract class Character {
     protected String name;
     protected int health;
-    protected int armor;
-    protected int attackDamage;
-    protected int attackSpeed;
+    protected double armor;
+    protected double attackDamage;
+    protected double attackSpeed;
     protected double hitpos;
     protected int level;
     protected int experience;
@@ -62,7 +62,7 @@ public abstract class Character {
 
     }
     
-    public void getDamage(int damage){
+    public void getDamage(double damage){
         this.health -= damage;
         System.out.println(this.name+" got "+damage+" damage.");
         
@@ -79,8 +79,11 @@ public abstract class Character {
         this.level += 1;
         this.maxHealth=this.maxHealth+this.level;
         this.attackDamage=this.attackDamage+this.level;
-        this.attackSpeed=(int)(this.attackSpeed*1.2);
-        System.out.println("Level up! You are now level"+this.level);
+        this.armor = this.armor * 1.2;
+        this.health = this.maxHealth;
+        this.hitpos *= 1.2;
+        this.attackSpeed=(this.attackSpeed*1.2);
+        System.out.println("Level up! You are now level "+this.level);
     }
     
     public abstract void die();
