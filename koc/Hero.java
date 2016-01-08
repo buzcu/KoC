@@ -35,4 +35,21 @@ public abstract class Hero extends Character {
 
 	}
 
+	public void listStats() {
+		System.out.println("*****************************************************");
+		System.out.println("Name: " + this.name);
+		System.out.println("Level: " + this.level);
+		System.out.println("Experience: " + this.experience + "/" + ((this.level*this.level)+1));
+		System.out.println("Gold: " + this.goldCoin);
+		System.out.println("Health: " + this.health + "/" + this.maxHealth);
+		System.out.println("Attack Points: " + this.attackDamage);
+		System.out.println("Defence Points: " + this.armor);
+		System.out.println("Attack Speed: " + this.attackSpeed);
+		System.out.println("Hit Chance: " + this.hitpos);
+		System.out.println("*****************************************************\n");
+		
+		
+		
+	}
+
 }

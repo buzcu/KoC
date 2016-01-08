@@ -1,6 +1,5 @@
 package koc;
 
-import java.util.Random;
 
 public class Hunter extends Hero {
 	int range;

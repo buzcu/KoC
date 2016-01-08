@@ -86,7 +86,7 @@ public class Nazi extends Enemy {
          
         } catch(Exception ex) {
             System.out.println("Error with playing sound.");
-            ex.printStackTrace();
+            //ex.printStackTrace();
         }
     } 
     public void stopSound() {
@@ -97,7 +97,7 @@ public class Nazi extends Enemy {
             clip.stop();
         } catch(Exception ex) {
             System.out.println("Error with playing sound.");
-            ex.printStackTrace();
+            //ex.printStackTrace();
         }
     } 
     

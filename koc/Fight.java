@@ -1,5 +1,8 @@
 package koc;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class Fight {
@@ -7,16 +10,17 @@ public class Fight {
     public Boolean Result;
     public Fight(Character player, Character enemy) {
     	reader = new Scanner(System.in);
-        System.out.println("A fight between "+player.name+" and "+enemy.name+" has started");
+    	System.out.println("*****************************************************");
+        System.out.println("A fight between "+player.name+" and "+enemy.name+" has started!");
         Result=main(player, enemy);
 
     }
 
     public Boolean main(Character player, Character enemy){
+    	String choice;
         while (player.health>0 && enemy.health>0){
-            System.out.println("\n\n\n\n\n");
-            System.out.println("Do you want to (H)it or (R)un:");
-            String choice = reader.next();
+            System.out.println("\nIt is your turn. Do you want to (H)it or (R)un:");
+            choice = reader.next();
             if (choice.equals("r")){
                 System.out.println("You choose the coward way and you fleed.");
                 return Boolean.FALSE;
@@ -24,7 +28,7 @@ public class Fight {
 
             player.attack_to(enemy);
             if (enemy.health>0) {
-                System.out.println("It is your enemy's turn to attack!");
+                System.out.println("\nIt is your enemy's turn to attack!");
                 enemy.attack_to(player);
             }
             else {

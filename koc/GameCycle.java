@@ -1,7 +1,6 @@
 package koc;
 
 import java.util.Random;
-import java.util.Scanner;
 
 public class GameCycle extends GameEnvironment {
 
@@ -17,7 +16,7 @@ public class GameCycle extends GameEnvironment {
 		
 		while (typeValid == 0)
 		{
-			System.out.println("You can (R)est or (W)alk:");
+			System.out.println("You can (R)est, (W)alk or (L)ist your stats:");
 			
 			playerMove = reader.next();
 
@@ -25,7 +24,9 @@ public class GameCycle extends GameEnvironment {
 					playerMove.equals("r") ||
 					playerMove.equals("R") ||
 					playerMove.equals("w") ||
-					playerMove.equals("W")
+					playerMove.equals("W") ||
+					playerMove.equals("l") ||
+					playerMove.equals("L")
 				)
 			{
 				typeValid = 1;
@@ -88,7 +89,12 @@ public class GameCycle extends GameEnvironment {
 				}
 			
 		}
-		System.out.println("Your new health is: "+ player.health);
+		if(playerMove.equals("L") || playerMove.equals("l"))
+		{
+			player.listStats();
+		}
+
+		System.out.println("Your health: "+ player.health);
 		
 	}
 

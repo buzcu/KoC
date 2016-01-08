@@ -33,7 +33,7 @@ public abstract class Character {
     {
         this.name = new String(name);
         this.maxHealth = 15;
-        this.health = health;
+        this.health = maxHealth;
         this.armor = armor;
         this.attackDamage = attackDamage;
         this.attackSpeed = attackSpeed;
@@ -79,7 +79,7 @@ public abstract class Character {
         this.level += 1;
         this.maxHealth=this.maxHealth+this.level;
         this.attackDamage=this.attackDamage+this.level;
-        this.attackSpeed=(int)(this.attackSpeed*0.7);
+        this.attackSpeed=(int)(this.attackSpeed*1.2);
         System.out.println("Level up! You are now level"+this.level);
     }
     
