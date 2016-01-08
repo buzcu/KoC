@@ -82,7 +82,7 @@ public class StormTrooper extends Enemy {
             clip.start();
         } catch(Exception ex) {
             System.out.println("Error with playing sound.");
-            ex.printStackTrace();
+            //ex.printStackTrace();
         }
     }   
 

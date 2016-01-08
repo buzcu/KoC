@@ -1,5 +1,4 @@
 package koc;
-import java.util.Random;
 
 public class Knight extends Hero {
 	int might;
