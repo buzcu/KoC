@@ -8,7 +8,7 @@ public class Mage extends Hero {
 	}
 
 	public Mage(String name) {
-		super(name, 5, 1, 1, 0, 1, 1, 1);
+		super(name, 5, 1, 1, 0, 1, 1, 0);
 		// TODO Auto-generated constructor stub
 	}
 
