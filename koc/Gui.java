@@ -5,8 +5,8 @@ package koc;
  */
 
 import java.awt.*;
-        import java.awt.event.*;
-        import javax.swing.*;
+import java.awt.event.*;
+import javax.swing.*;
 
 public class Gui extends JApplet {
     // Text fields for Number 1, Number 2, and Result
