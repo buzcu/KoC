@@ -10,15 +10,15 @@ import javax.swing.*;
 
 public class Gui extends JApplet {
     // Text fields for Number 1, Number 2, and Result
-    private JTextField jtfNum1, jtfNum2, jtfResult;
+    private JTextField j_welcome_text, j_name_request, jtfResult;
 
     // Buttons "Add"
-    private JButton jbtAdd;
+    private JButton jbtAdd, jknight, jwarrior, jninja, jmage, jhunter;
 
     // Main method
     public static void main() {
         // Create a frame
-        JFrame frame = new JFrame("Test");
+        JFrame frame = new JFrame("Knights of Cydonia");
 
         // Create an instance of the applet
         Gui applet = new Gui();
@@ -41,41 +41,109 @@ public class Gui extends JApplet {
         // Panel p1 to hold text fields and labels
         JPanel p1 = new JPanel();
         p1.setLayout(new FlowLayout());
-        p1.add(new JLabel("Number 1"));
-        p1.add(jtfNum1 = new JTextField(3));
-        p1.add(new JLabel("Number 2"));
-        p1.add(jtfNum2 = new JTextField(3));
-        p1.add(new JLabel("Result"));
-        p1.add(jtfResult = new JTextField(8));
-        jtfResult.setEditable(false);
-        jtfResult.setHorizontalAlignment(SwingConstants.RIGHT);
-
-        // Panel p2 to hold buttons
+        p1.add(new JLabel("Welcome to Knights of Cydonia!"));
         JPanel p2 = new JPanel();
-        p2.setLayout(new FlowLayout());
-        p2.add(jbtAdd = new JButton("Add"));
+        p2.add(new JLabel("Name"));
+        p2.add(j_name_request = new JTextField(10));
 
+        j_name_request.setHorizontalAlignment(SwingConstants.RIGHT);
+
+        // Panel p3 to hold buttons
+        JPanel p3 = new JPanel();
+        p3.setLayout(new FlowLayout());
+        p3.add(jhunter = new JButton("Hunter"));
         // Set mnemonic keys
-        jbtAdd.setMnemonic('A');
+        jhunter.setMnemonic('H');
+
+        p3.add(jknight = new JButton("Knight"));
+        // Set mnemonic keys
+        jknight.setMnemonic('K');
+
+        p3.add(jninja = new JButton("Ninja"));
+        // Set mnemonic keys
+        jninja.setMnemonic('N');
+
+        p3.add(jmage = new JButton("Mage"));
+        // Set mnemonic keys
+        jmage.setMnemonic('M');
+
+        p3.add(jwarrior = new JButton("Warrior"));
+        // Set mnemonic keys
+        jwarrior.setMnemonic('W');
 
         // Add panels to the frame
         setLayout(new BorderLayout());
-        add(p1, BorderLayout.CENTER);
-        add(p2, BorderLayout.SOUTH);
+        add(p1, BorderLayout.NORTH);
+        add(p2, BorderLayout.CENTER);
+        add(p3, BorderLayout.SOUTH);
 
         // Register listeners
-        jbtAdd.addActionListener(new Listener());
+        jknight.addActionListener(new Listener_knight());
+        jhunter.addActionListener(new Listener_hunter());
+        jninja.addActionListener(new Listener_ninja());
+        jmage.addActionListener(new Listener_mage());
+        jwarrior.addActionListener(new Listener_warior());
     }
 
-    class Listener implements ActionListener {
+    class Listener_hunter implements ActionListener {
         // Handle ActionEvent from buttons
         public void actionPerformed(ActionEvent e) {
-            // Obtain Number 1 and Number 2
-            int num1 = Integer.parseInt(jtfNum1.getText().trim());
-            int num2 = Integer.parseInt(jtfNum2.getText().trim());
-            int result = num1 + num2;
-            // Set result in jtfResult
-            jtfResult.setText(String.valueOf(result));
+
+
+            String player_name = j_name_request.getText().trim();
+            System.out.println(player_name);
+
+
+        }
+    }
+
+
+    class Listener_knight implements ActionListener {
+        // Handle ActionEvent from buttons
+        public void actionPerformed(ActionEvent e) {
+
+
+            String player_name = j_name_request.getText().trim();
+            System.out.println(player_name);
+
+
+        }
+    }
+
+    class Listener_ninja implements ActionListener {
+        // Handle ActionEvent from buttons
+        public void actionPerformed(ActionEvent e) {
+
+
+            String player_name = j_name_request.getText().trim();
+            System.out.println(player_name);
+
+
+        }
+    }
+
+    class Listener_mage implements ActionListener {
+        // Handle ActionEvent from buttons
+        public void actionPerformed(ActionEvent e) {
+
+
+            String player_name = j_name_request.getText().trim();
+            System.out.println(player_name);
+
+
+        }
+    }
+
+
+    class Listener_warior implements ActionListener {
+        // Handle ActionEvent from buttons
+        public void actionPerformed(ActionEvent e) {
+
+
+            String player_name = j_name_request.getText().trim();
+            System.out.println(player_name);
+
+
         }
     }
 }
